@@ -17,10 +17,10 @@ function Lista() {
         <aside>
             <h2> Estudos dos dia</h2>
             <ul>
-                {tarefas.map((item, index) => (
+                {tarefas.map((tarefa, index) => (
                     <li key={index}>
-                        <h3> {item.tarefa} </h3>
-                        <span> {item.tempo} </span>
+                        <h3> {tarefa.tarefa} </h3>
+                        <span> {tarefa.tempo} </span>
                     </li>
                 ))}               
             </ul>
