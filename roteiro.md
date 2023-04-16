@@ -15,4 +15,7 @@ CSSinJs
 Styled-componentes
 estilizando com Sass
 
+UseState: retorna um array para que possamos desestruturar e pegar os valores de forma simples, apenas utilizando [estado, funçãoqueMudaoEstado]
+
+REACT ===> ESTADO ===> COMPONENTES
 
