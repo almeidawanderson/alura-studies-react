@@ -1,20 +1,25 @@
 import React from "react";
 import Botao from "../botton";
 import style from './Formulario.module.scss'
+import { ITarefa } from "../../types/ITarefa";
 
-class Formulario extends React.Component {
+class Formulario extends React.Component<{
+    setTarefas: React.Dispatch<React.SetStateAction<ITarefa[]>>
+
+}> {
     state = {
         tarefa: "",
         tempo: "00:00"
     }
 
-    addTask(evento: React.FormEvent<HTMLFormElement>) {
+    adicionarTarefa(evento: React.FormEvent<HTMLFormElement>) {
        evento.preventDefault();
+       this.props.setTarefas(tarefasAntigas => [...tarefasAntigas, {...this.state}])
     }
 
     render() {
         return(
-            <form className={style.novaTarefa} onSubmit={this.addTask.bind(this)}>
+            <form className={style.novaTarefa} onSubmit={this.adicionarTarefa.bind(this)}>
                 <div className={style.inputContainer}>
                     <label htmlFor="Tarefa">
                         Adicione um novo estudo
@@ -44,11 +49,11 @@ class Formulario extends React.Component {
                     onChange={evento => this.setState({...this.state, tempo: evento.target.value})}
                     id="tempo"
                     min="00:00:00"
-                    max="01:30:00"
+                    max="06:00:00"
                     required
                     /> 
                  </div>
-                 <Botao>
+                 <Botao type="submit">
                     Adicionar
                 </Botao>
                
