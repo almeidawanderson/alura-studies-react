@@ -23,7 +23,8 @@ class Formulario extends React.Component<{
         // criando um novo objeto
          {...this.state,
             selecionado: false,
-            completado: false
+            completado: false,
+            id: uuidv4()
         }
     ])
       
