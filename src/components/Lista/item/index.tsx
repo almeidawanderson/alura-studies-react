@@ -15,16 +15,20 @@ export default function Item(
   selecionaTarefa}:
    Props) { 
   
+
+    //<li className={${style.item} ${selecionado ? style.itemSelecionado : ""}}>
   return (
-    <li className={style.item} 
-    onClick={() => selecionaTarefa(
-      {
-        tarefa, 
-        tempo, 
-        selecionado, 
-        completado, 
+    <li
+    className={`${style.item} ${selecionado ? style.itemSelecionado : ''}`}
+    onClick={()=> selecionaTarefa(
+       {
+       tarefa,
+        tempo,
+        selecionado,
+        completado,
         id
-      })}>
+        }
+    )}>
       <h3> {tarefa} </h3>
       <span> {tempo} </span>
     </li>
