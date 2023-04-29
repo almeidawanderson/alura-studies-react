@@ -7,8 +7,6 @@ export interface Props {
     selecionaTarefa: (tarefaSelecionada: ITarefa) => void
 }
 
-
-
 function Lista({tarefas, selecionaTarefa}: Props) {    
     return (
         <aside className={style.listaTarefas}>

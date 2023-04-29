@@ -5,7 +5,15 @@ export interface Props extends ITarefa {
   selecionaTarefa:  (tarefaSelecionada: ITarefa) =>  void
 }
 
-export default function Item({tarefa, tempo, selecionado, completado, id, selecionaTarefa}: Props) { 
+export default function Item(
+  {
+  tarefa,
+  tempo,
+  selecionado,
+  completado,
+  id, 
+  selecionaTarefa}:
+   Props) { 
   
   return (
     <li className={style.item} 
