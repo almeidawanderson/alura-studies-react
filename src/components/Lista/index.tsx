@@ -2,6 +2,8 @@ import style from './Lista.module.scss';
 import Item from "./item";
 import { ITarefa } from '../../types/ITarefa';
 
+// componente secundário dos items das tarefas
+
 export interface Props {
     tarefas: ITarefa[],
     selecionaTarefa: (tarefaSelecionada: ITarefa) => void
